@@ -1,8 +1,24 @@
 {
   "name": "smileyrecruiter",
+<<<<<<< HEAD
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
+=======
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "bcrypt": "^5.0.1",
+    "mongoose": "^5.13.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+>>>>>>> 8b256a114f33d04ad0a7a75d98e6fc3763f34963
   "scripts": {
     "start": "node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
