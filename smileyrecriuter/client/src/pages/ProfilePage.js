@@ -1,9 +1,10 @@
 import React from "react";
+import Profile from "../components/Profile"
 
 export default function ProfilePage() {
     return (
-        <>
-        <p>This is the ProfilePage</p>
-        </>
+        <div className="row">
+        <Profile />
+        </div>
     );
 }
