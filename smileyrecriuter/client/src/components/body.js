@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 import HeaderNav from './HeaderNav';
-import SearchPage from './pages/SearchPage';
-import LoginPage from './pages/LoginPage';
-import ProfilePage from './pages/ProfilePage';
+import SearchPage from '../pages/SearchPage.js';
+import LoginPage from '../pages/LoginPage.js';
+import ProfilePage from '../pages/ProfilePage.js';
 
 export default function Body() {
     // make default page the Bio page
@@ -27,7 +27,7 @@ export default function Body() {
 
     return (
         <>
-            <div>
+            <div className="container-fluid w-100">
                 <HeaderNav 
                 currentPage={currentPage} 
                 handlePageChange={handlePageChange} 
