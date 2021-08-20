@@ -1,0 +1,134 @@
+[
+    {
+        "username": "JHarbaugh",
+        "email": "jh@ohiostatemustbedestroyed.org",
+        "password": "jh1234",
+        "location": "Ann Arbor",
+        "education": "GED",
+        "desPoz": "Mad Bomber What Bombs At Midnight",
+        "savedJobs": [
+            {
+                "jobID": "2387053463"
+            },
+            {
+                "jobID": "2381480819"
+            },
+            {
+                "jobID": "2381483543"
+            },
+            {
+                "jobID": "2370888320"
+            }
+        ]
+    },
+    {
+        "username": "BSchembechler",
+        "email": "bs@ohiostatemustbedestroyed.org",
+        "password": "bs1234",
+        "location": "Ann Arbor",
+        "education": "PHD",
+        "desPoz": "Waitress",
+        "savedJobs": [
+            {
+                "jobID": "2370888320"
+            },
+            {
+                "jobID": "2387053463"
+            },
+            {
+                "jobID": "2381483543"
+            },
+            {
+                "jobID": "2381483543"
+            }
+        ]
+    },
+    {
+        "username": "FYost",
+        "email": "fy@ohiostatemustbedestroyed.org",
+        "password": "fy1234",
+        "location": "Ann Arbor",
+        "education": "BA, English Literature",
+        "desPoz": "Robot Surgeon",
+        "savedJobs": [
+            {
+                "jobID": "2381483543"
+            },
+            {
+                "jobID": "2370888320"
+            },
+            {
+                "jobID": "2387053463"
+            },
+            {
+                "jobID": "2389586913"
+            }
+        ]
+    },
+    {
+        "username": "LCarr",
+        "email": "lc@ohiostatemustbedestroyed.org",
+        "password": "lc1234",
+        "location": "Ann Arbor",
+        "education": "MS, Library Science",
+        "desPoz": "President of the United States",
+        "savedJobs": [
+            {
+                "jobID": "2381483543"
+            },
+            {
+                "jobID": "2389586913"
+            },
+            {
+                "jobID": "2370888320"
+            },
+            {
+                "jobID": "2381480819"
+            }
+        ]
+    },
+    {
+        "username": "GFord",
+        "email": "gf@ohiostatemustbedestroyed.org",
+        "password": "gf1234",
+        "location": "Ann Arbor",
+        "education": "8th Grade",
+        "desPoz": "Boxer",
+        "savedJobs": [
+            {
+                "jobID": "2387053463"
+            },
+            {
+                "jobID": "2381483543"
+            },
+            {
+                "jobID": "2381488769"
+            },
+            {
+                "jobID": "2370888320"
+            }
+        ]
+    },
+    {
+        "username": "CWoodson",
+        "email": "cw@ohiostatemustbedestroyed.org",
+        "password": "cw1234",
+        "location": "Ann Arbor",
+        "education": "MA/Kicking Ass",
+        "desPoz": "Attorney",
+        "savedJobs": [
+            {
+                "jobID": "2381480819"
+            },
+            {
+                "jobID": "2387053463"
+            },
+            {
+                "jobID": "2381483543"
+            },
+            {
+                "jobID": "2389950691"
+            }
+        ]
+    }
+]
