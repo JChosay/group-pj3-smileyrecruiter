@@ -1,9 +1,13 @@
 import React from "react";
+import './style.css';
 
 export default function Footer() {
     return (
-        <div className="w-100 bg-danger">
-        <p>This is the Footer</p>
-        </div>
+        <footer className="footer">
+            <div className="footer-container text-center">
+               <p>&#169; 2021 www.SmileyRecruiter.com</p>
+            </div>
+        </footer>
     );
 }
+

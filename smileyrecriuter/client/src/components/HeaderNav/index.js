@@ -1,5 +1,5 @@
 import React from "react";
-// import './style.css';
+import './style.css';
 
 export default function HeaderNav ({ currentPage, handlePageChange }) {
     return (
@@ -13,7 +13,7 @@ export default function HeaderNav ({ currentPage, handlePageChange }) {
                         <a href="#searchPage"
                             onClick={() => handlePageChange('SearchPage')}
                             className={currentPage === 'SearchPage' ? 'nav-link disabled' : 'nav-link'}>
-                            SearchPage
+                            Search for Jobs
                         </a>
                     </li>
 
@@ -21,7 +21,7 @@ export default function HeaderNav ({ currentPage, handlePageChange }) {
                         <a href="#profilePage"
                             onClick={() => handlePageChange('ProfilePage')}
                             className={currentPage === 'ProfilePage' ? 'nav-link disabled' : 'nav-link'}>
-                            ProfilePage
+                            My Profile
                         </a>
                     </li>
 
@@ -29,7 +29,7 @@ export default function HeaderNav ({ currentPage, handlePageChange }) {
                         <a href="#loginPage"
                             onClick={() => handlePageChange('LoginPage')}
                             className={currentPage === 'LoginPage' ? 'nav-link disabled' : 'nav-link'}>
-                            LoginPage
+                            Login &amp; Sign-Up
                         </a>
                     </li>
 
