@@ -3,10 +3,12 @@ const { Schema, model } = require('mongoose');
 const jobSchema = new Schema(
     {
         job_id: {
-            type: String
+            type: String,
+            required: true
         },
         job_title: {
-            type: String
+            type: String,
+            required: true
         },
         job_description: {
             type: String
@@ -15,26 +17,25 @@ const jobSchema = new Schema(
             type: String
         },
         job_companyName: {
-            type: String
+            type: String,
+            required: true
         },
         job_salary: {
-            type: String
+            type: Number
             //TODO data type for currency? What happens when my paper get sky-high?
         },
-        job_datePost: {
-            type: String
-            //TODO data type for dates?
-        },
-        job_dateSaved: {
-            type: String
-            //TODO data type for dates?
-        },
-        job_compLink: {
+        job_comLink: {
             type: String
         },
         job_category: {
             type: String
         },
-        user_id: Urban Meyer is a Cunt.
+        job_postDate: {
+            type: Date
+        }
     }
 )
+
+const Job = model('Job', jobSchema);
+
+module.exports = Job;
