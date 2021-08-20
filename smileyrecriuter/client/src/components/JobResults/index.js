@@ -1,6 +1,22 @@
 import React from "react";
+import { searchJobs} from '../utils/API';
 
-export default function JobResults() {
+export default function  JobResults(props) {
+
+    const searchAdzuna = async () => {
+    let location = props.searchObj.location
+    let jobTitle = props.searchObj.jobTitle
+    try {
+        const resp = await searchJobs(jobTitle, location)
+        const data = await resp.json()
+        console.log(data.results);
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+searchAdzuna()
+
     return (
         <div className="border border-dark m-2 p-2">
             <div className="card">
