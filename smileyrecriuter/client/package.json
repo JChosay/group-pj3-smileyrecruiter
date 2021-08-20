@@ -38,6 +38,9 @@
     ]
   },
   "react-dotenv": {
-    "whitelist": ["APP_ID", "APP_KEY"]
-}
+    "whitelist": [
+      "APP_ID",
+      "APP_KEY"
+    ]
+  }
 }
