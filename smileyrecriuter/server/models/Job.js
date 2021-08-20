@@ -22,7 +22,9 @@ const jobSchema = new Schema(
         },
         job_salary: {
             type: Number
-            //TODO data type for currency? What happens when my paper get sky-high?
+
+            //TODO data type for currency? And what happens when my paper get sky-high?
+
         },
         job_comLink: {
             type: String
