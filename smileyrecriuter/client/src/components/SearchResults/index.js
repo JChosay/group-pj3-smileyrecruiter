@@ -6,7 +6,7 @@ import RecentSearches from "./recentSearches";
 
 import TopCompanies from "./topCompanies"
 
-export default function SearchResults() {
+export default function SearchResults(props) {
     return (
         <div className="row col-12">
 
@@ -16,7 +16,7 @@ export default function SearchResults() {
             </div>
             
             <div className="col-8">
-                <JobResults />
+                <JobResults searchObj={props.searchObj} />
             </div>
         </div>
     );
