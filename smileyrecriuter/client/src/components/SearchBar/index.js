@@ -18,18 +18,22 @@ export default function SearchBar(props) {
 
 
     return (
-        <>
-            <form className="form-inline col-12 d-flex justify-content-around border border-dark p-2 m-2" onSubmit={handleFormSubmit}>
-                <div className="form-group mb-2 w-40">
-                    <label for="jobTitle" className="sr-only" >Job Title</label>
-                    <input type="text"  className="form-control w-100" id="jobTitle" placeholder="job title" onChange={(e) => props.setJobInput(e.target.value)}></input>
-                </div>
-                <div className="form-group mx-sm-3 mb-2 w-40">
-                    <label for="location" className="sr-only">location</label>
-                    <input type="text" className="form-control w-100" id="location" placeholder="location" onChange={(e) => props.setLocationInput(e.target.value)}></input>
-                </div>
-                <button type="submit" className="btn btn-danger mb-2 col-12">Search Job Listings</button>
-            </form>
-        </>
+        
+         <>
+         <form className="form-inline col-12 d-flex justify-content-around p-2 mx-auto" onSubmit={handleFormSubmit}>
+             {/* Job Title form input */}
+             <div className="form-group mb-2 col-4">
+                 <input type="text" className="form-control w-100 border border-dark" id="jobTitle" placeholder="job title" onChange={(e) => props.setJobInput(e.target.value)}></input>
+             </div>
+
+             {/* Location form input */}
+             <div className="form-group mb-2 col-4">
+                 <input type="text" className="form-control w-100 border border-dark" id="location" placeholder="location" onChange={(e) => props.setLocationInput(e.target.value)}></input>
+             </div>
+
+             {/* Search Jobs Button */}
+             <button type="submit" className="btn btn-warning mb-2 col-3 jobBtn">Search Job Listings</button>
+         </form>
+     </>
     );
 }
