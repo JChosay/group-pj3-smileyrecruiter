@@ -27,7 +27,7 @@ export default function Body() {
 
     return (
         <>
-            <div className="container-fluid w-100">
+            <div className="container-fluid w-100 p-0">
                 <HeaderNav 
                 currentPage={currentPage} 
                 handlePageChange={handlePageChange} 

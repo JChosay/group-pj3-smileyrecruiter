@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBar from "../components/SearchBar"
+import SearchBar from "../components/SearchResults/searchBar";
 import SearchResults from "../components/SearchResults"
 
 export default function SearchPage() {
@@ -7,7 +7,6 @@ export default function SearchPage() {
         <div className="row">
         <SearchBar />
         <SearchResults/>
-        
         </div>
     );
 }
