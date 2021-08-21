@@ -1,4 +1,5 @@
-const { Schema, model } = require('mongoose');
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 const jobSchema = new Schema(
     {
@@ -22,7 +23,6 @@ const jobSchema = new Schema(
         },
         job_salary: {
             type: Number
-
         },
         job_comLink: {
             type: String
@@ -36,6 +36,6 @@ const jobSchema = new Schema(
     }
 )
 
-const Job = model('Job', jobSchema);
+const Job = mongoose.model('Job', jobSchema);
 
 module.exports = Job;
