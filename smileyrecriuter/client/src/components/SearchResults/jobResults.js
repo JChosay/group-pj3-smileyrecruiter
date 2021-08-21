@@ -39,6 +39,7 @@ export default function JobResults(props) {
 
         if (jobData) {
             result = jobData.map((datum) => {
+                console.log(datum.redirect_url);
                 return (
                     <div className="card">
                         <div className="card-body">
@@ -47,8 +48,7 @@ export default function JobResults(props) {
                             <h6 className="card-subtitle mb-2 text-muted">Type: {datum.category.label} || Posted: {datum.created}</h6>
                             <h6 className="card-subtitle mb-2 text-muted">Employer: {datum.company.display_name}</h6>
                             <h6 className="card-subtitle mb-2 text-muted">{datum.location.area[3]}, {datum.location.area[1]} ({datum.location.area[2]})</h6>
-                            <a href="{datum.redirect_url}"><h6 className="card-subtitle mb-2 text-muted">Job Posting Link (External) </h6></a>
-                
+                            <a href={datum.redirect_url}><h6 className="card-subtitle mb-2 text-muted">Job Posting Link (External) </h6></a>
                             <p className="card-text">
                                {isExpanded ? datum.description : datum.description.substring(0,100)}
                             </p>
