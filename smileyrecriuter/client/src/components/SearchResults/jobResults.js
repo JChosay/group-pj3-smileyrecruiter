@@ -39,7 +39,6 @@ export default function JobResults(props) {
 
         if (jobData) {
             result = jobData.map((datum) => {
-                console.log(datum.redirect_url);
                 return (
                     <div className="card">
                         <div className="card-body">
