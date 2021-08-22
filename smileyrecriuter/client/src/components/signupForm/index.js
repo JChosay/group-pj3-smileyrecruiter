@@ -18,12 +18,7 @@ export default function SignupForm() {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // check if form has everything (as per react-bootstrap docs)
-    // const form = event.currentTarget;
-    // if (form.checkValidity() === false) {
-    //   event.preventDefault();
-    //   event.stopPropagation();
-    // }
+   
     console.log(userFormData);
     try {
       const response = await createUser(userFormData);
@@ -58,7 +53,7 @@ export default function SignupForm() {
         <form className="form signup-form" id="sign-up-form" onSubmit={(e)=>handleFormSubmit(e)}>
           <div className="form-group">
             <label>Name:</label>
-            <input className="form-input" name="name" type="text" id="name-signup" placeholder="Username" onChange={handleInputChange} />
+            <input className="form-input" name="name" type="text" id="name-signup" placeholder="Name" onChange={handleInputChange} />
           </div>
           <div className="form-group">
             <label>Email:</label>
