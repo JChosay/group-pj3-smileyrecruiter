@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { searchJobs } from '../utils/API';
+import { searchJobs, topCompanies } from '../utils/API';
 
 export default function JobResults(props) {
     const [jobData, setJobData] = useState(null);

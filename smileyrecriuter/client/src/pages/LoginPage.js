@@ -6,9 +6,9 @@ import Loghead from "../components/Loghead";
 export default function LoginPage() {
     return (
         <div>
-            <div>
+            {/* <div>
                 <Loghead />
-            </div>
+            </div> */}
             <div className="row">
                 <LoginForm />
                 <SignupForm />
