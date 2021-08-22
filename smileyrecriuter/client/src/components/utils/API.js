@@ -28,3 +28,13 @@ export const loginUser = (userData) => {
     body: JSON.stringify(userData),
   });
 };
+export const saveJob = (jobData, token) => {
+  return fetch('/api/users', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(jobData),
+  });
+};

@@ -21,9 +21,6 @@ const jobSchema = new Schema(
             type: String,
             required: true
         },
-        job_salary: {
-            type: Number
-        },
         job_comLink: {
             type: String
         },
