@@ -10,6 +10,7 @@ export default function SearchPage() {
  const [searchObj, setSearchObj] = useState({})
 
 
+
     return (
         <div className="row">
         <SearchBar jobInput={jobInput} 
