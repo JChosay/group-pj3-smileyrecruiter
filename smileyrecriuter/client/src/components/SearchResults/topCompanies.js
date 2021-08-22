@@ -1,4 +1,5 @@
 import React from "react";
+import { topCompanies } from '../utils/API';
 
 
 export default function TopCompanies() {
