@@ -1,12 +1,44 @@
 import React, { useState } from "react";
 
-
+import Auth from '../utils/auth';
+import { saveJob } from '../utils/API';
 
 export default function JobDetails(props) {
 
 
+    const handleSaveJob = async (jobData) => {
+      
+        const token = Auth.loggedIn() ? Auth.getToken() : null;
+    
+        if (!token) {
+          return false;
+        }
 
-    console.log(props.jobDetails)
+        let jobToSave = {
+            job_id: jobData.id,
+            job_title: jobData.title,
+            job_description: jobData.description,
+            job_location: jobData.location.display_name,
+            job_companyName: jobData.company.display_name,
+            job_comLink: jobData.redirect_url,
+            job_category: jobData.category.label,
+            job_postDate: jobData.created,
+        }
+        console.log(jobToSave);
+        try {
+          const response = await saveJob(jobToSave, token);
+    
+          if (!response.ok) {
+            throw new Error('something went wrong!');
+          }
+    
+          // if book successfully saves to user's account, save book id to state
+          //setSavedBookIds([...savedBookIds, bookToSave.bookId]);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+    
 
 
 
@@ -28,6 +60,11 @@ export default function JobDetails(props) {
                     <button onClick={() => {
                         props.setActivePanel("job list")
                     }}>Click to go back</button>
+                    {Auth.loggedIn() && (
+                    <button
+                    onClick={()=>{handleSaveJob(props.jobDetails)}}
+                    >Save job to profile</button>
+                    )}
                 </div>
             </div>
         </div>
