@@ -20,15 +20,15 @@ export default function SignupForm() {
                     </div>
                     <div class="form-group">
                         <label for="location-signup">Location:</label>
-                        <input class="form-input" type="text" id="location-signup" placeholder="Username" />
+                        <input class="form-input" type="text" id="location-signup" placeholder="Location" />
                     </div>
                     <div class="form-group">
                         <label for="Education-signup">Education:</label>
-                        <input class="form-input" type="text" id="education-signup" placeholder="Username" />
+                        <input class="form-input" type="text" id="education-signup" placeholder="Education" />
                     </div>
                     <div class="form-group">
                         <label for="deisred-position-signup">Desired position:</label>
-                        <input class="form-input" type="text" id="desired-position-signup" placeholder="Username" />
+                        <input class="form-input" type="text" id="desired-position-signup" placeholder="Desired Position" />
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary" id="signup-page-btn" type="submit">Sign Up</button>
