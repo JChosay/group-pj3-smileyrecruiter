@@ -11,10 +11,6 @@ export default function SearchPage() {
 
 
 
-
-
-
-
     return (
         <div className="row">
         <SearchBar jobInput={jobInput} 
