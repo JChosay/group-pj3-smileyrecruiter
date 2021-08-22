@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const Job = require("./Job")
 
 const userSchema = new Schema(
   {
@@ -27,7 +28,12 @@ const userSchema = new Schema(
     desPoz: {
         type: String
     },
-    savedJobs: [jobSchema],
+    savedJobs: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Job"
+      }
+    ],
     },
 );
 

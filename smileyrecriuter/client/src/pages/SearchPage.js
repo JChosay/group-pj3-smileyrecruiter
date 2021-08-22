@@ -8,7 +8,7 @@ export default function SearchPage() {
  const [jobInput, setjobInput] = useState("")
  const [locationInput, setLocationInput] = useState("")
  const [searchObj, setSearchObj] = useState({})
-console.log(searchObj);
+
 
 
 
