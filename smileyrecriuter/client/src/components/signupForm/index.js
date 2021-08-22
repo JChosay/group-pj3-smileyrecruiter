@@ -6,6 +6,7 @@ import Auth from '../utils/auth';
 
 export default function SignupForm() {
 
+
   const [userFormData, setUserFormData] = useState({ name: '', email: '', password: '' });
  
 
@@ -74,4 +75,5 @@ export default function SignupForm() {
       </div>
     </>
   )
+
 }
