@@ -1,13 +1,12 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const Job = require("./Job")
+const jobSchema = require("./Job")
 
 const userSchema = new Schema(
   {
-    username: {
+    name: {
       type: String,
       required: true,
-      unique: true,
     },
     email: {
       type: String,
@@ -28,13 +27,9 @@ const userSchema = new Schema(
     desPoz: {
         type: String
     },
-    savedJobs: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Job"
-      }
-    ],
-    },
+    savedJobs: [jobSchema],
+    }
+    
 );
 
 // hash user password

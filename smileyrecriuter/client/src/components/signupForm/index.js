@@ -1,28 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { createUser } from '../utils/API';
+import Auth from '../utils/auth';
+
 
 export default function SignupForm() {
-    return (
-        <>
-            <div class="col-md-5 border border-dark">
-                <h2>Sign Up</h2>
-                <form class="form signup-form" id="sign-up-form">
-                    <div class="form-group">
-                        <label for="name-signup">Name:</label>
-                        <input class="form-input" type="text" id="name-signup" placeholder="Username" />
-                    </div>
-                    <div class="form-group">
-                        <label for="email-signup">Email:</label>
-                        <input class="form-input" type="text" id="email-signup" placeholder="email@mail.com" />
-                    </div>
-                    <div class="form-group">
-                        <label for="password-signup">Password:</label>
-                        <input class="form-input" type="password" id="password-signup" placeholder="Must be 8 characters or more" />
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary" id="signup-page-btn" type="submit">Sign Up</button>
-                    </div>
-                </form>
-            </div>
-        </>
-    )
+
+  const [userFormData, setUserFormData] = useState({ name: '', email: '', password: '' });
+ 
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserFormData({ ...userFormData, [name]: value });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    // check if form has everything (as per react-bootstrap docs)
+    // const form = event.currentTarget;
+    // if (form.checkValidity() === false) {
+    //   event.preventDefault();
+    //   event.stopPropagation();
+    // }
+    console.log(userFormData);
+    try {
+      const response = await createUser(userFormData);
+     
+
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
+
+      const { token, user } = await response.json();
+     
+     
+      Auth.login(token);
+    } catch (err) {
+      console.log(err);
+
+
+    }
+
+    setUserFormData({
+      username: '',
+      email: '',
+      password: '',
+    });
+  };
+
+
+  return (
+    <>
+      <div className="col-md-5 border border-dark">
+        <h2>Sign Up</h2>
+        <form className="form signup-form" id="sign-up-form" onSubmit={(e)=>handleFormSubmit(e)}>
+          <div className="form-group">
+            <label>Name:</label>
+            <input className="form-input" name="name" type="text" id="name-signup" placeholder="Username" onChange={handleInputChange} />
+          </div>
+          <div className="form-group">
+            <label>Email:</label>
+            <input className="form-input" type="text" name="email" id="email-signup" placeholder="email@mail.com" onChange={handleInputChange} />
+          </div>
+          <div className="form-group">
+            <label>Password:</label>
+            <input className="form-input" type="password" name="password" id="password-signup" placeholder="Must be 8 characters or more" onChange={handleInputChange} />
+          </div>
+          <div className="form-group">
+            <button className="btn btn-primary" id="signup-page-btn" type="submit">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </>
+  )
 }
