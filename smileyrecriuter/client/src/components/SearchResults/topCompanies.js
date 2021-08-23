@@ -1,20 +1,56 @@
-import React from "react";
-import { topCompanies } from '../utils/API';
+import React, { useEffect, useState } from "react";
+import { getTopCompanies } from '../utils/API';
 
 
-export default function TopCompanies() {
+export default function TopCompanies(props) {
+
+    const [topCompanies, setTopCompanies] = useState();
+
+    useEffect(() => {
+        let location = props.searchObj.location
+        let jobTitle = props.searchObj.jobTitle
+        if (!location || !jobTitle){
+            return
+        } else{
+            try {
+                getTopCompanies(jobTitle, location).then((res) => {
+                    return res.json()
+                }).then((data) => {
+                    
+                    setTopCompanies(data.leaderboard);
+                    
+                });
+            } catch (error) {
+                console.log(error);
+            }
+        }
+      
+
+    }, [props.searchObj.jobTitle,props.searchObj.location]);
+
+    const renderTopCompanies = () => {
+        let list;
+        if(topCompanies){
+            list = topCompanies.map((company, i)=> {
+                return (
+                    <li className="list-group-item"key={i}>{company.canonical_name}</li>
+                )
+            })
+        }
+        return list
+    }
+    if(topCompanies){
     return (
         <div className="border border-dark p-2 m-2">
             <h5 className="card-title cardHeaders">Top Companies</h5>
             <ul className="list-group">
-                <li className="list-group-item">Facebook</li>
-                <li className="list-group-item">Amazon</li>
-                <li className="list-group-item">Google</li>
-                <li className="list-group-item">Oracle</li>
-                <li className="list-group-item">Government</li>
+                {renderTopCompanies()}
+                
             </ul>
         </div>
-    );
+    )} else {
+        return null;
+    };
 }
 
 
