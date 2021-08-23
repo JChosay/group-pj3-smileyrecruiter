@@ -60,6 +60,20 @@ module.exports = {
       return res.status(400).json(err);
     }
   },
+  async updateUser({ user, body }, res) {
+    
+    try {
+      const updatedUser = await User.findOneAndUpdate(
+        { _id: user._id },
+        { ...body },
+        { new: true}
+      );
+      return res.json(updatedUser);
+    } catch (err) {
+      console.log(err);
+      return res.status(400).json(err);
+    }
+  },
   // remove a book from `savedBooks`
   async deleteJob({ user, params }, res) {
     const updatedUser = await User.findOneAndUpdate(
