@@ -3,6 +3,7 @@ const {
   createUser,
   getSingleUser,
   saveJob,
+  updateUser,
   //deleteBook,
   login,
 } = require('../../controllers/user-controller');
@@ -15,7 +16,7 @@ router.route('/').post(createUser).put(authMiddleware, saveJob);
 
 router.route('/login').post(login);
 
-router.route('/me').get(authMiddleware, getSingleUser);
+router.route('/me').get(authMiddleware, getSingleUser).put(authMiddleware, updateUser);
 
 //router.route('/books/:bookId').delete(authMiddleware, deleteBook);
 

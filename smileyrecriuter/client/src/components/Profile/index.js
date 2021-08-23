@@ -44,7 +44,7 @@ export default function Profile() {
         <div className="row col-12">
 
             <div className="col-4">
-                <UserDetails userData={userData} />
+                <UserDetails userData={userData} setUserData={setUserData}/>
             </div>
             
             <div className="col-8">

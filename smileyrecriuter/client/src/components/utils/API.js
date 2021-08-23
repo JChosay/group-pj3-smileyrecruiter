@@ -47,3 +47,13 @@ export const getMe = (token) => {
     },
   });
 };
+export const updateMe = (userData, token) => {
+  return fetch('/api/users/me', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(userData),
+  });
+};
