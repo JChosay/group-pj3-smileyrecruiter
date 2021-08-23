@@ -28,6 +28,7 @@ export const loginUser = (userData) => {
     body: JSON.stringify(userData),
   });
 };
+
 export const saveJob = (jobData, token) => {
   return fetch('/api/users', {
     method: 'PUT',
