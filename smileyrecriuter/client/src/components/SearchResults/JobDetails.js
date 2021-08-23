@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Auth from '../utils/auth';
 import { saveJob } from '../utils/API';

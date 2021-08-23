@@ -9,10 +9,12 @@ export default function SearchBar(props) {
             jobTitle: props.jobInput,
             location: props.locationInput
         })
+        
         //send this data to the recent searches component
 
         props.setJobInput("")
         props.setLocationInput("")
+        
       };
 
 

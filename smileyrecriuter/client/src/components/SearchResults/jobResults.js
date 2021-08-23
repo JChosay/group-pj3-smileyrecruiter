@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { searchJobs, topCompanies } from '../utils/API';
+import { searchJobs,  } from '../utils/API';
 
 export default function JobResults(props) {
     const [jobData, setJobData] = useState(null);
-    const [isExpanded, setIsExpanded] = useState(false);
+    
 
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export default function JobResults(props) {
                 searchJobs(jobTitle, location).then((res) => {
                     return res.json()
                 }).then((data) => {
-                    console.log("data**", data);
+                    
                     setJobData(data.results);
                 });
             } catch (error) {
@@ -44,7 +44,7 @@ export default function JobResults(props) {
                             <h6 className="card-subtitle mb-2 text-muted">{datum.location.area[3]}, {datum.location.area[1]} ({datum.location.area[2]})</h6>
                             <a target="_blank" rel="noopener noreferrer" href={datum.redirect_url}><h6 className="card-subtitle mb-2 text-muted">Job Posting Link (External) </h6></a>
                             <p className="card-text">
-                               {isExpanded ? datum.description : datum.description.substring(0,100)+ "..."}
+                               {datum.description.substring(0,100)+ "..."}
                             </p>
                             <button onClick={async (e) =>{
                                 props.setActivePanel("job detail")

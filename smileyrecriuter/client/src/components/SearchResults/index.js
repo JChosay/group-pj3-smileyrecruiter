@@ -29,13 +29,13 @@ export default function SearchResults(props) {
         <div className="row col-12">
 
             <div className="col-4">
-                <RecentSearches />
-                <TopCompanies />
+                <RecentSearches searchObj={props.searchObj}/>
+                <TopCompanies searchObj={props.searchObj}/>
             </div>
             
             <div className="col-8">
                 {renderJobComponent()}
-                {/* If job results is true show job results otherwise shoiw job details depending on state */}
+                
                 
             </div>
         </div>
