@@ -7,7 +7,7 @@ export default function SearchBar(props) {
 
     
     const handleFormSubmit = async (e) => {
-        console.log(props.jobInput+" || "+ props.locationInput);
+       
         e.preventDefault();
         props.setSearchObj({
             jobTitle: props.jobInput,
