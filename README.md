@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Smiley Recruiter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) &nbsp;&nbsp;&nbsp;&nbsp;![Repo size badge](https://img.shields.io/github/repo-size/JChosay/group-pj3-smileyrecruiter?color=success) &nbsp;&nbsp;&nbsp;&nbsp;![Language % badge](https://img.shields.io/github/languages/top/JChosay/group-pj3-smileyrecruiter) &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Available Scripts
 
-In the project directory, you can run:
+## :memo: Description
+ Smiley Recruiter is a job search web application that allows users to look for employment opportunities nationwide based on keywords and location input. If the user creates an account, they can also save job listings to their profile. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :trophy: Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+  
+  
+---
+## Installation
+To run locally:
+* Fork the https://github.com/JChosay/group-pj3-smileyrecruiter repo.
+* Clone your forked repo to VS Code on your computer.
+* Open entire parent folder of the project in your terminal.
+* Install the node dependencies by entering in the terminal:
+```
+npm i
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Then enter `npm run develop` to see in the browser. The application will then be listening on port 3000. Open your browser and put `localhost:3000` in the address bar of the browser page to see the application on your local device.
 
-### `npm test`
+---
+## Usage
+Users can search for job postings by keywords and location. Recent searches and top employers of the entered keywords will also populate on the search page. Once logged in, job listings can be saved to a user's profile as well.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Launch Heroku Deployed Web Application](https://safe-journey-56448.herokuapp.com/) <br />
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Login App Image](./client/public/images/loginScreenshot.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Search App Image](./client/public/images/SearchScreenshot.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Profile App Image](./client/public/images/ProfileScreenshot.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+---
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is governed by the license: MIT
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+---
+## Contributing
+>*This application was developed by:*
+    <br />Mohamed Abukar
+    <br />Josh Chosay
+    <br />Karina Clausen
+    <br />Matt Ray
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+The technologies that made this possible are:
+* HTML
+* CSS
+* <a href="https://www.javascript.com/" target="_blank">JavaScript</a>
+* <a href="https://nodejs.org/api/fs.html" target="_blank">Node.js</a>
+* <a href="https://expressjs.com/" target="_blank">Express.js</a>
+* <a href="https://www.json.org/json-en.html" target="_blank">JSON</a>
+* <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+* <a href="https://reactjs.org/" target="_blank">React</a>
+* <a href="https://react-bootstrap.github.io/" target="_blank">React Bootstrap</a>
+* <a href="https://www.apollographql.com/" target="_blank">Apollo</a>
+* <a href="https://graphql.org/" target="_blank">GraphQL</a>
+* <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>
+* <a href="https://mongoosejs.com/" target="_blank">Mongoose</a>
+* <a href="https://www.w3schools.com/whatis/whatis_fullstack_js.asp" target="_blank">MERN Stack</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Our API for this app:
+   * <a href="https://developer.adzuna.com/" target="_blank">Adzuna API</a> 
 
-### Making a Progressive Web App
+  
+  
+  
+  
+ ---
+## :question: Questions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For any questions, please contact us using the information below: <br />
+<br />:octocat: GitHub: [@Mohamed Abukar](https://github.com/mohamedabukar)
+<br />:octocat: GitHub: [@JChosay](https://github.com/JChosay)
+<br />:octocat: GitHub: [@Karina5151](https://github.com/Karina5151)
+<br />:octocat: GitHub: [@Matthew Ray](https://github.com/m-ray-ofSunshine)
