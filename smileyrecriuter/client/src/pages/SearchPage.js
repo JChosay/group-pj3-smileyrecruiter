@@ -20,7 +20,7 @@ export default function SearchPage() {
         searchObj={searchObj} 
         setSearchObj={setSearchObj}
         />
-        <SearchResults searchObj={searchObj} />
+        <SearchResults searchObj={searchObj} setSearchObj={setSearchObj}/>
         
         </div>
     );
