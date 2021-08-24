@@ -29,7 +29,7 @@ export default function SearchResults(props) {
         <div className="row col-12">
 
             <div className="col-4">
-                <RecentSearches searchObj={props.searchObj}/>
+                <RecentSearches searchObj={props.searchObj} setSearchObj={props.setSearchObj}/>
                 <TopCompanies searchObj={props.searchObj}/>
             </div>
             

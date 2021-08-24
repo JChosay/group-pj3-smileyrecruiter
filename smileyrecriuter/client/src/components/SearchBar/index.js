@@ -12,8 +12,7 @@ export default function SearchBar(props) {
         
         //send this data to the recent searches component
 
-        props.setJobInput("")
-        props.setLocationInput("")
+       
         
       };
 
