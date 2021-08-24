@@ -15,7 +15,7 @@ export default function RecentSearches(props) {
         if(recentSearches){
             list = recentSearches.map((search, i)=> {
                 return (
-                    <li className="list-group-item"key={i}><button onClick={()=>props.setSearchObj({jobTitle: search.jobTitle, location: search.location})}> {search.jobTitle} in {search.location} </button>{search.jobTitle} in {search.location}</li>
+                    <li className="list-group-item"key={i}><button onClick={()=>props.setSearchObj({jobTitle: search.jobTitle, location: search.location})}> {search.jobTitle} in {search.location} </button></li>
                 )
             })
            
