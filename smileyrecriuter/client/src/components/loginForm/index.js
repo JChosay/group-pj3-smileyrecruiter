@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import { loginUser } from '../utils/API';
 import Auth from '../utils/auth';
 export default function LoginForm() {
-    const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+    const [userLoginData, setUserLoginData] = useState({ email: '', password: '' });
     
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setUserFormData({ ...userFormData, [name]: value });
+        setUserLoginData({ ...userLoginData, [name]: value });
     };
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await loginUser(userFormData);
+            const response = await loginUser(userLoginData);
 
             if (!response.ok) {
                 throw new Error('something went wrong!');
@@ -27,7 +27,7 @@ export default function LoginForm() {
 
         }
 
-        setUserFormData({
+        setUserLoginData({
             name: '',
             email: '',
             password: '',
