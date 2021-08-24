@@ -5,14 +5,9 @@ import Loghead from "../components/Loghead";
 
 export default function LoginPage() {
     return (
-        <div>
-            {/* <div>
-                <Loghead />
-            </div> */}
-            <div className="row">
-                <LoginForm />
-                <SignupForm />
-            </div>
+        <div className="row justify-content-center ">
+            <LoginForm />
+            <SignupForm />
         </div>
     );
 }

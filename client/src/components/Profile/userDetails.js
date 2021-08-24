@@ -51,8 +51,8 @@ export default function UserDetails(props) {
 
         <>
             { renderReady === true && (
-            <div className="col-md-5 border border-dark m-2 p-2">
-                <h2>Sign Up</h2>
+            <div className=" border border-dark m-2 p-2">
+                <h2>User Details</h2>
                 <form className="form signup-form" id="sign-up-form" onSubmit={(e) => handleFormSubmit(e)}>
                     <div className="form-group">
                         <label>Name:</label>
@@ -79,7 +79,7 @@ export default function UserDetails(props) {
                         <input className="form-control" type="text" name="desPoz" value={userFormData.desPoz}  onChange={handleInputChange} />
                     </div>
                     <div className="form-group">
-                        <button className="btn btn-primary" type="submit">Update</button>
+                        <button className="btn btn-warning" type="submit">Update</button>
                     </div>
                 </form>
             </div>

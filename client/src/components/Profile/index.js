@@ -41,9 +41,9 @@ export default function Profile() {
     }, [userDataLength]);
 
     return (
-        <div className="row col-12">
+        <div className="row col-12 justify-content-center">
 
-            <div className="col-4">
+            <div className="col-3 ">
                 <UserDetails userData={userData} setUserData={setUserData}/>
             </div>
             

@@ -38,19 +38,19 @@ export default function LoginForm() {
 
     return (
         <>
-            <div className="col-md-5 border border-dark">
+            <div className="col-md-5 border border-dark mx-3">
                 <h2>Log In</h2>
                 <form className="form login-form" id="log-in-form" onSubmit={handleFormSubmit}>
                     <div className="form-group">
                         <label>Email:</label>
-                        <input className="form-input" name="email" type="text" id="email-login" onChange={handleInputChange} />
+                        <input className="form-input ml-2" name="email" type="text" id="email-login" onChange={handleInputChange} />
                     </div>
                     <div className="form-group">
                         <label >Password:</label>
-                        <input className="form-input" name="password" type="password" id="password-login" onChange={handleInputChange} />
+                        <input className="form-input ml-2" name="password" type="password" id="password-login" onChange={handleInputChange} />
                     </div>
                     <div className="form-group">
-                        <button className="btn btn-primary" id="login-page-btn" type="submit">Log In</button>
+                        <button className="btn btn-warning ml-1" id="login-page-btn" type="submit">Log In</button>
                     </div>
                 </form>
             </div>

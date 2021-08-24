@@ -14,7 +14,8 @@ export default function SavedJobs(props) {
                             <p className="card-text">
                                 {job.job_description}
                             </p>
-                            <a href={job.job_comLink} className="card-link">view job details</a>
+                            <a href={job.job_comLink} target="_blank"
+                            className="card-link">view job details</a>
 
                         </div>
                     </div>
